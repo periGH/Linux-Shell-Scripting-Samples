@@ -1,0 +1,100 @@
+Script started on Thu 21 Feb 2019 04:43:08 PM PST
+[psahan@hills cs160aa]$ date
+Thu Feb 21 16:43:10 PST 2019
+[psahan@hills cs160aa]$ cat aboutme.sh
+# !/bin/bash
+
+# MY FIRST SHELL SCRIPT [ABOUTME]
+# This shell script give some information about the owner who is a computer science student at CCSF, hills system and the owner's 
+## files and directories info on hills account. 
+# Written by; Perihan Sahan
+# Last Modified; March 6, 2017
+
+#Step1--Welcome message from the owner
+echo
+echo -n Hello from
+pinky -l $LOGNAME | head -n 1 | cut -d: -f3
+
+echo
+
+##Step2--Information about many classes are being taken by the owner in this semester.
+classes=$(groups | tr " " "\n" | grep "^c" | wc -l)
+echo "You are taking $classes classes this semester."
+
+echo
+
+###Step3
+#Part1 - Output of the host you are logged in on.
+echo "You are currently logged onto $HOSTNAME system."
+
+echo
+
+#Part2--Output for how long the system has been running,how many users are currently logged on
+##  --- and the current one-minute load average.
+
+echo "The system has been up for $(uptime | cut -c 11-26) hours."
+echo
+echo "There are $(users | wc -w) users logged on."
+echo
+echo The current one minute $(uptime | cut -d ',' -f4)
+echo
+
+####Step4--The directories in your search path(in order)
+path=$(echo $PATH | tr ":" "\n")
+echo "The directories in your search path:"
+echo "$path"
+
+echo
+
+#####Step5--Your terminal type
+echo Your terminal type is "$TERM".
+ 
+echo
+
+######Step6
+#Part1--How much disk space is consuming in your home directory
+echo "Here is the space utilization of your home directory in kiB:"
+echo $(du -sk ~)
+
+echo 
+
+##Part2--How many files and directories your home directory has beneath it
+echo "Your home directory contains $(find ~ -type d | wc -l) directories and $(find ~ -type f | wc -l) files."
+
+echo 
+
+[psahan@hills cs160aa]$ cat aboutme.sh aboutme.sh  aboutme.sh  aboutme.sh b aboutme.sha aboutme.shs aboutme.shh aboutme.sh
+
+Hello from  psahan
+
+You are taking 1 classes this semester.
+
+You are currently logged onto hills.ccsf.edu system.
+
+The system has been up for up 45 days,  8:4 hours.
+
+There are 25 users logged on.
+
+The current one minute load average: 0.18
+
+The directories in your search path:
+/usr/local/bin
+/usr/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/opt/puppetlabs/bin
+/students/psahan/bin
+.
+
+Your terminal type is dumb.
+
+Here is the space utilization of your home directory in kiB:
+29140 /students/psahan
+
+Your home directory contains 359 directories and 1463 files.
+
+[psahan@hills cs160aa]$ exit
+exit
+
+Script done on Thu 21 Feb 2019 04:43:52 PM PST
