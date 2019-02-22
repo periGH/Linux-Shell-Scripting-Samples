@@ -1,0 +1,137 @@
+Script started on Mon 18 Feb 2019 11:25:21 PM PST
+[psahan@hills ~]$ date
+Mon Feb 18 23:25:27 PST 2019
+[psahan@hills ~]$ id
+uid=9184(psahan) gid=5000(students) groups=5000(students),5928(c77729)
+[psahan@hills ~]$ whoami
+psahan
+[psahan@hills ~]$ who
+psahan   pts/1        2019-02-18 23:24 (69.181.192.167)
+psahan   pts/3        2019-02-18 23:25
+uwostner pts/6        2019-02-18 16:58 (157.131.142.135)
+nconlu   pts/7        2019-02-18 23:08 (52.161.27.120)
+abrick   pts/8        2019-02-14 09:59 (75.101.98.54)
+skangani pts/9        2019-02-18 23:19 (52.161.27.120)
+clim32   pts/10       2019-02-18 20:32 (52.161.27.120)
+abolkhov pts/11       2019-02-18 21:04 (76.14.184.190)
+lacuna3  pts/14       2019-02-18 22:36 (52.161.27.120)
+drose14  pts/15       2019-02-18 18:43 (52.161.27.120)
+mdai1    pts/16       2019-02-18 22:01 (52.161.27.120)
+zhong12  pts/18       2019-02-18 22:31 (69.181.25.240)
+jcarpe12 pts/19       2019-02-18 20:53 (52.161.27.120)
+uwostner pts/21       2019-02-18 11:27 (157.131.142.135)
+zsaechao pts/22       2019-02-18 22:22 (52.161.27.120)
+amittal  pts/24       2019-02-17 21:49 (75.18.249.132)
+amittal  pts/27       2019-02-18 12:42 (75.18.249.132)
+lacuna3  pts/31       2019-02-18 21:41 (52.161.27.120)
+kchew5   pts/32       2019-02-18 20:05 (52.161.27.120)
+apittma7 pts/34       2019-02-18 22:39 (98.248.125.81)
+amittal  pts/35       2019-02-13 12:44 (64.125.46.186)
+amittal  pts/37       2019-02-18 17:22 (75.18.249.132)
+rpowell  pts/38       2019-02-18 19:29 (198.27.234.232)
+mponoma1 pts/39       2019-02-18 21:11 (52.161.27.120)
+rpowell  pts/42       2019-02-18 20:39 (198.27.234.232)
+slin168  pts/43       2019-02-18 17:42 (52.161.27.120)
+jwong371 pts/44       2019-02-18 22:43 (52.161.27.120)
+rchan85  pts/45       2019-02-18 22:44 (52.161.27.120)
+jruvira  pts/46       2019-02-18 20:53 (52.161.27.120)
+jwong371 pts/47       2019-02-18 22:50 (52.161.27.120)
+vtsvirko pts/48       2019-02-18 22:57 (73.252.235.77)
+mgonza46 pts/53       2019-02-18 23:05 (73.241.109.116)
+atsvirko pts/54       2019-02-18 23:14 (73.252.235.77)
+[psahan@hills ~]$ pwd
+/students/psahan
+[psahan@hills ~]$ cat /etc/0s  os-release
+NAME="Red Hat Enterprise Linux Server"
+VERSION="7.5 (Maipo)"
+ID="rhel"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="7.5"
+PRETTY_NAME="Red Hat Enterprise Linux"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:7.5:GA:server"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 7"
+REDHAT_BUGZILLA_PRODUCT_VERSION=7.5
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="7.5"
+[psahan@hills ~]$ echo $0
+bash
+[psahan@hills ~]$ echo $SHELL
+/bin/bash
+[psahan@hills ~]$ ls
+~  111A  111A-TA  111B	111C  211E  211S  cs160a  cs160aa  cs177  Lab1.script  mix  public_html
+[psahan@hills ~]$ cd cs160a
+[psahan@hills cs160a]$ cp -r /pub/cs/gboyd/cs160a/Lab1 .
+[psahan@hills cs160a]$ ls
+Lab1
+[psahan@hills cs160a]$ cs=d     d Lan b1
+[psahan@hills Lab1]$ cat README
+This README file is for the Lab1 directory.
+This directory contains several practice files for the 
+first lab in cs160a:
+README	this file
+xyz	a document
+wrong	a dummy file with the wrong name
+dir1	an empty directory
+.hidden a hidden file
+[psahan@hills Lab1]$ cp README README1
+[psahan@hills Lab1]$ mv wri ong right
+[psahan@hills Lab1]$ file xyz
+xyz: PDF document, version 1.4
+[psahan@hills Lab1]$ ls dir1
+[psahan@hills Lab1]$ ls -l
+total 28
+drwxr-xr-x 2 psahan students     6 Feb 18 23:26 dir1
+-rw-r--r-- 1 psahan students   238 Feb 18 23:26 README
+-rw-r--r-- 1 psahan students   238 Feb 18 23:27 README1
+-rw-r--r-- 1 psahan students    52 Feb 18 23:26 right
+-rw-r--r-- 1 psahan students 15211 Feb 18 23:26 xyz
+[psahan@hills Lab1]$ ls -la
+total 32
+drwxr-xr-x 3 psahan students    86 Feb 18 23:27 .
+drwx------ 3 psahan students    18 Feb 18 23:26 ..
+drwxr-xr-x 2 psahan students     6 Feb 18 23:26 dir1
+-rw-r--r-- 1 psahan students    81 Feb 18 23:26 .hidden
+-rw-r--r-- 1 psahan students   238 Feb 18 23:26 README
+-rw-r--r-- 1 psahan students   238 Feb 18 23:27 README1
+-rw-r--r-- 1 psahan students    52 Feb 18 23:26 right
+-rw-r--r-- 1 psahan students 15211 Feb 18 23:26 xyz
+[psahan@hills Lab1]$ rmdir Lab1      dir1
+[psahan@hills Lab1]$ mkdir dir2
+[psahan@hills Lab1]$ ls 
+dir2  README  README1  right  xyz
+[psahan@hills Lab1]$ cd dir2
+[psahan@hills dir2]$ cat > file.txt
+This is a i tex st file 
+[psahan@hills dir2]$ mkdir dir3
+[psahan@hills dir2]$ ls
+dir3  file.txt
+[psahan@hills dir2]$ cd ..
+[psahan@hills Lab1]$ ls
+dir2  README  README1  right  xyz
+[psahan@hills Lab1]$ rm -r dir2
+[psahan@hills Lab1]$ rm xyz
+[psahan@hills Lab1]$ rm .ho idden README README1 right
+[psahan@hills Lab1]$ ct at > me.txt 
+Hello from Peri to you all!
+[psahan@hills Lab1]$ cat me.txt >> Lab1.txt
+[psahan@hills Lab1]$ cat me.txt >> Lab1.txt Lab1.txt  Lab1.txt Lab1.txt  Lab1.txt  Lab1.txt  Lab1.txt  Lab1.txt  Lab1.txt  Lab1.txt Lab1.txt 
+Hello from Peri to you all!
+[psahan@hills Lab1]$ cat > stdout  
+Sr tandard output is a data stream which is opened by default
+fr or every process.It is an output stream and is by default
+connected to the monut  t itor.
+[psahan@hills Lab1]$ wc    cat > stdout stdout stdout  stdout  stdout  stdout w stdoutc stdout[psahan@hills Lab1]$ wc  stdout- stdoutl stdout
+3 stdout
+[psahan@hills Lab1]$ wc -l stdout stdout w stdout
+26 stdout
+[psahan@hills Lab1]$ clear
+[psahan@hills Lab1]$ exit
+exit
+
+Script done on Mon 18 Feb 2019 11:33:12 PM PST
