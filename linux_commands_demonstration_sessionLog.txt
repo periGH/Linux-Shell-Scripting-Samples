@@ -1,0 +1,150 @@
+(base) perihansahan@Peris-MBP-2 ~ % ./linux_commands_demonstration.sh 
+Sun Jul  2 20:34:38 PDT 2023
+Working with directories
+/Users/peri
+MyDir1		MyDir2		_directory
+MyDir2		_directory
+/Users/peri/MyDir/MyDir2
+/Users/peri/MyDir
+MyDir2		_directory
+/Users/peri/MyDir
+.
+├── MyDir2
+└── _directory
+
+3 directories, 0 files
+MyDir2		_directory
+.		..		MyDir2		_directory
+total 0
+drwxr-xr-x  2 perihansahan  staff  64 Jul  2 20:34 MyDir2
+drwxr-xr-x  2 perihansahan  staff  64 Jul  2 20:34 _directory
+total 0
+drwxr-xr-x    4 perihansahan  staff   128 Jul  2 20:34 .
+drwxr-xr-x+ 110 perihansahan  staff  3520 Jul  2 20:34 ..
+drwxr-xr-x    2 perihansahan  staff    64 Jul  2 20:34 MyDir2
+drwxr-xr-x    2 perihansahan  staff    64 Jul  2 20:34 _directory
+rm: MyDir: No such file or directory
+.
+└── test
+    └── NewFolder
+
+3 directories, 0 files
+rm: ./*: No such file or directory
+Working with files
+./file.txt
+./july4th.txt
+./summer.txt
+       4 summer.txt
+ 16K	.
+Darwin Peris-MBP-2.attlocal.net 21.6.0 Darwin Kernel Version 21.6.0: Thu Jun  8 23:57:12 PDT 2023; root:xnu-8020.240.18.701.6~1/RELEASE_X86_64 x86_64
+*****
+2345
+2nd of July
+Hello Summer and Sunshine!
+Hello Summer and Sunshine!
+2nd of July
+*****
+2345
+archive.tar.gz	file.txt	renamedfile.txt
+directory	july4th.txt	summer.txt
+Filesystem       Size   Used  Avail Capacity iused     ifree %iused  Mounted on
+/dev/disk1s6s1  466Gi   14Gi   38Gi    28%  502161 399730080    0%   /
+devfs           191Ki  191Ki    0Bi   100%     660         0  100%   /dev
+/dev/disk1s4    466Gi   10Gi   38Gi    21%      11 399730080    0%   /System/Volumes/VM
+/dev/disk1s2    466Gi  255Mi   38Gi     1%     808 399730080    0%   /System/Volumes/Preboot
+/dev/disk1s7    466Gi  620Ki   38Gi     1%      19 399730080    0%   /System/Volumes/Update
+/dev/disk1s5    466Gi  316Gi   38Gi    90% 1727915 399730080    0%   /System/Volumes/Data
+map auto_home     0Bi    0Bi    0Bi   100%       0         0  100%   /System/Volumes/Data/home
+total 40
+-rwxr-xr-x  1 perihansahan  staff  200 Jul  2 20:34 archive.tar.gz
+drwxr-xr-x  4 perihansahan  staff  128 Jul  2 20:34 directory
+drwxr-xr-x  2 perihansahan  staff   64 Jul  2 20:34 empty-directory
+-rw-r--r--  1 perihansahan  staff   21 Jul  2 20:34 file.txt
+-rw-r--r--  1 perihansahan  staff   18 Jul  2 20:34 july4th.txt
+-rw-r--r--  1 perihansahan  staff   21 Jul  2 20:34 renamedfile.txt
+-rw-r--r--  1 perihansahan  staff   50 Jul  2 20:34 summer.txt
+total 40
+-rwxr-xr-x  1 perihansahan  staff  200 Jul  2 20:34 archive.tar.gz
+drwxr-xr-x  4 perihansahan  staff  128 Jul  2 20:34 directory
+-rw-r--r--  1 perihansahan  staff   21 Jul  2 20:34 file.txt
+-rw-r--r--  1 perihansahan  staff   18 Jul  2 20:34 july4th.txt
+-rw-r--r--  1 perihansahan  staff   21 Jul  2 20:34 renamedfile.txt
+-rw-r--r--  1 perihansahan  staff   50 Jul  2 20:34 summer.txt
+ 28K	.
+8.0K	./directory
+4.0K	./summer.txt
+4.0K	./renamedfile.txt
+4.0K	./july4th.txt
+4.0K	./file.txt
+4.0K	./directory/file2.txt
+4.0K	./directory/file1.txt
+4.0K	./archive.tar.gz
+100755 archive.tar.gz
+40755 directory
+100644 file.txt
+100644 july4th.txt
+100644 renamedfile.txt
+100644 summer.txt
+total 40
+drwxr-xr-x    8 perihansahan  staff   256 Jul  2 20:34 .
+drwxr-xr-x+ 112 perihansahan  staff  3584 Jul  2 20:34 ..
+-rwxr-xr-x    1 perihansahan  staff   200 Jul  2 20:34 archive.tar.gz
+drwxr-xr-x    4 perihansahan  staff   128 Jul  2 20:34 directory
+-rw-r--r--    1 perihansahan  staff    21 Jul  2 20:34 file.txt
+-rw-r--r--    1 perihansahan  staff    18 Jul  2 20:34 july4th.txt
+-rw-r--r--    1 perihansahan  staff    21 Jul  2 20:34 renamedfile.txt
+-rw-r--r--    1 perihansahan  staff    50 Jul  2 20:34 summer.txt
+total 40
+-rwxr-xr-x  1 perihansahan  staff   200B Jul  2 20:34 archive.tar.gz
+drwxr-xr-x  4 perihansahan  staff   128B Jul  2 20:34 directory
+-rw-r--r--  1 perihansahan  staff    21B Jul  2 20:34 file.txt
+-rw-r--r--  1 perihansahan  staff    18B Jul  2 20:34 july4th.txt
+-rw-r--r--  1 perihansahan  staff    21B Jul  2 20:34 renamedfile.txt
+-rw-r--r--  1 perihansahan  staff    50B Jul  2 20:34 summer.txt
+./file.txt
+./renamedfile.txt
+./july4th.txt
+./summer.txt
+./directory/file2.txt
+./directory/file1.txt
+./archive.tar.gz
+Hello Summer and Sunshine!
+2nd of July
+*****
+2345
+diff: file1.txt: No such file or directory
+diff: file2.txt: No such file or directory
+Hello Summer and Sunshine!
+du: invalid option -- b
+usage: du [-Aclnx] [-H | -L | -P] [-g | -h | -k | -m] [-a | -s | -d depth] [-B blocksize] [-I mask] [-t threshold] [file ...]
+file.txt exists
+directory exists
+.
+./file.txt
+./renamedfile.txt
+./july4th.txt
+./summer.txt
+./directory
+./directory/file2.txt
+./directory/file1.txt
+./archive.tar.gz
+perihansahan
+/opt/anaconda3/bin:/opt/anaconda3/condabin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/local/mysql/support-files:/opt/X11/bin:/usr/local/mysql/bin:/usr/local/mysql/bin
+ls command is available
+501
+Current time: 20:34:38
+System load average: 4.39
+Random password: 7UNr40BLCORKrHVH
+Hash value of file.txt: cefc5a628553e84c2b4ef8907bc8932b161a035680efe791f44402b675ce3b7f  file.txt
+Intel(R) Core(TM) i7-6660U CPU @ 2.40GHz
+PING google.com (142.251.15.113): 56 data bytes
+64 bytes from 142.251.15.113: icmp_seq=0 ttl=103 time=64.674 ms
+64 bytes from 142.251.15.113: icmp_seq=1 ttl=103 time=65.756 ms
+64 bytes from 142.251.15.113: icmp_seq=2 ttl=103 time=65.849 ms
+64 bytes from 142.251.15.113: icmp_seq=3 ttl=103 time=66.288 ms
+64 bytes from 142.251.15.113: icmp_seq=4 ttl=103 time=65.611 ms
+
+--- google.com ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 64.674/65.636/66.288/0.531 ms
+(base) perihansahan@Peris-MBP-2 ~ % 
