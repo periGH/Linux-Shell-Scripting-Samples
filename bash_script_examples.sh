@@ -1,31 +1,11 @@
-# To create multiple text files in a .sh shell script, you can use a combination of loops and file creation commands. 
-# Here's an example that demonstrates creating three text files with different names:
-
-#!/bin/bash
-
-# Array of filenames
-filenames=("file1.txt" "file2.txt" "file3.txt")
-
-# Loop through the filenames array
-for filename in "${filenames[@]}"; do
-    # Create the file with a default content
-    echo "Hello, $filename" > "$filename"
-done
-
-# In the above script, an array named filenames contains the names of the text files to be created. 
-# The script then uses a for loop to iterate through each filename in the array. Within the loop, 
-# it uses the echo command to write a default content into each file using the respective filename.
-
-
-# To use this script:
-# Open a text editor.
-# Copy and paste the above code into the text editor.
-# Save the file with a .sh extension, for example, create_files.sh.
-# Open a terminal and navigate to the directory where you saved the .sh file.
-# Make the script executable by running the command: chmod +x create_files.sh.
-# Execute the script by typing ./create_files.sh in the terminal and pressing Enter.
-# Upon running the script, it will create three text files (file1.txt, file2.txt, and file3.txt) in the same directory, 
-# each with a different default content. Feel free to modify the filenames or customize the content inside the loop as per your requirements.
+# The provided bash shell code performs a series of tasks. 
+# Firstly, it displays a welcome message and prompts the user to enter their name and age. 
+# It then checks if the user is an adult based on their age input. 
+# The script lists files in the current directory and creates a new directory called "my_directory." 
+# Next, it displays the current date and time. Following that, it creates three files with default content using a loop. 
+# The script then showcases various examples such as copying files with permissions, renaming a directory, deleting files and directories, and more. 
+# It covers a wide range of topics including loops, conditional statements, file handling, string manipulation, command line arguments, error handling, etc. 
+# Finally, it concludes with an exit message.
 
 #!/bin/bash
 
@@ -64,8 +44,25 @@ current_time=$(date +"%H:%M:%S")
 echo "Current date: $current_date"
 echo "Current time: $current_time"
 
-# Example 1: For Loop -Iterates over a sequence of numbers from 1 to 5 (inclusive) 
-# Prints the message "Iteration" followed bt the value of 'i'
+# Array of filenames
+filenames=("file1.txt" "file2.txt" "file3.txt")
+# Loop through the filenames array
+for filename in "${filenames[@]}"; do
+    # Create the file with a default content
+    echo "Hello, $filename" > "$filename"
+done
+
+# Copying Files with Permissions
+cp -p source.txt destination.txt
+
+# Renaming a Directory
+mv old_dir new_dir
+
+# Deleting Files and Directories
+rm file.txt
+rm -r directory
+
+# Example 1: For Loop 
 for i in {1..5}; do
     echo "Iteration $i"
 done
@@ -79,15 +76,10 @@ else
 fi
 
 # Example 3: Command Substitution
-# Using 'date' command in Linux and assings it to the variable 'current_date'
-# Prints the string "Current date:" + followed by the current_date variable value. 
-# For ex: "Current date:2023-07-05"
 current_date=$(date +"%Y-%m-%d")
 echo "Current date: $current_date"
 
 # Example 4: Functions
-# The given code defines a functoin name 'greet' that takes one argument. 
-# Calls greet() function to print the string "Hello, John!"
 greet() {
     echo "Hello, $1!"
 }
@@ -263,8 +255,132 @@ backup_dir="backup_$(date +"%Y%m%d_%H%M%S")"
 mkdir "$backup_dir"
 cp -r source_dir/* "$backup_dir"
 
+# Example 31: Checking if a File is Readable
+filename="file.txt"
+if [ -r "$filename" ]; then
+    echo "$filename is readable."
+else
+    echo "$filename is not readable."
+fi
+
+# Example 32: Renaming Multiple Files
+for file in file*.txt; do
+    new_name="new_${file}"
+    mv "$file" "$new_name"
+done
+
+# Example 33: Counting Files in a Directory
+file_count=$(ls -1 | wc -l)
+echo "Number of files in the directory: $file_count"
+
+# Example 34: Extracting Filename and Extension
+filename="file.txt"
+base_name="${filename%.*}"
+extension="${filename##*.}"
+echo "Base name: $base_name"
+echo "Extension: $extension"
+
+# Example 35: File Permissions in Symbolic Form
+filename="file.txt"
+permissions=$(stat -c "%A" "$filename")
+echo "File permissions: $permissions"
+
+# Example 36: File Ownership
+filename="file.txt"
+owner=$(stat -c "%U" "$filename")
+group=$(stat -c "%G" "$filename")
+echo "Owner: $owner"
+echo "Group: $group"
+
+# Example 37: Check if a File is Executable
+filename="script.sh"
+if [ -x "$filename" ]; then
+    echo "$filename is executable."
+else
+    echo "$filename is not executable."
+fi
+
+# Example 38: Finding and Replacing Text in a File
+search="old_text"
+replace="new_text"
+sed -i "s/$search/$replace/g" file.txt
+
+# Example 39: Compressing Files using gzip
+gzip file.txt
+
+# Example 40: Counting Words in a File
+word_count=$(wc -w file.txt | awk '{print $1}')
+echo "Number of words in file.txt: $word_count"
+
+# Example 41: Removing Duplicate Lines from a File
+sort file.txt | uniq > file_without_duplicates.txt
+
+# Example 42: Checking File Size
+file_size=$(stat -c "%s" file.txt)
+echo "File size: $file_size bytes"
+
+# Example 43: Searching for Files by Name
+search_term="example"
+find . -name "*$search_term*"
+
+# Example 44: Checking if a Directory Exists
+directory="my_directory"
+if [ -d "$directory" ]; then
+    echo "$directory exists."
+else
+    echo "$directory does not exist."
+fi
+
+# Example 45: Creating a Soft Link
+target_file="file.txt"
+link_name="file_link"
+ln -s "$target_file" "$link_name"
+
+# Example 46: Sorting Files by Last Modified Date
+ls -lt
+
+# Example 47: Checking Disk Usage per Directory
+du -sh *
+
+# Example 48: Listing Running Processes
+ps aux
+
+# Example 49: Checking System Memory Usage
+free -h
+
+# Example 50: Calculating File Hash (MD5)
+md5sum file.txt
+
+# Example 51: Searching for Files by Name
+filename="example.txt"
+find /path/to/search -name "$filename"
+
+# Example 52: Checking Network Connectivity
+ping -c 4 google.com
+
+# Example 53: Checking Disk Space Usage
+df -h
+
+# Example 54: Checking System Uptime
+uptime
+
+# Example 55: Searching for Text in Files
+grep "search term" file.txt
+
+# Example 56: Running a Command with Root Privileges 
+sudo command_name
+
+# Example 57: Checking File Type 
+file document.pdf
+
+# Example 58: Displaying System Information
+uname -a
+
+# Example 59: Compressing Files using Zip
+zip archive.zip file1.txt file2.txt
+
+# Example 60: Unzipping Files
+unzip archive.zip
 
 # Exit message
 echo "Bash Script completed. Goodbye!"
-
-
